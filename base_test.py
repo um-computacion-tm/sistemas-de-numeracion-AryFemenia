@@ -1,12 +1,18 @@
 import unittest
-from decimal_binario import bin2dec
-from decimal_binario import dec2bin
+from base import *
 
-class TestConversor(unittest.TestCase):
-    def test_bin2dec(self):
-        self.assertEqual(bin2dec('111'), 7)
-    def test_dec2bin(self):
-        self.assertEqual(dec2bin(7), '111')
+class TestBaseChanger(unittest.TestCase):
+    def test_102(self):
+        res = dec_bin(10)
+        self.assertEqual(res, "1010")
+        
+    def test_108(self):
+        res = dec_oct(10)
+        self.assertEqual(res, "12")
+
+    def test_1016(self):
+        res = dec_hex(10)
+        self.assertEqual(res, "A")
 
 if __name__ == '__main__':
     unittest.main()
