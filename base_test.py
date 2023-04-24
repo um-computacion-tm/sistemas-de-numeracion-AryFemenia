@@ -2,7 +2,7 @@ import unittest
 from decimal_binario import bin2dec
 from decimal_binario import dec2bin
 
-class TestConversor(unittest.Testcase):
+class TestConversor(unittest.TestCase):
     def test_bin2dec(self):
         self.assertEqual(bin2dec('111'), 7)
     def test_dec2bin(self):
