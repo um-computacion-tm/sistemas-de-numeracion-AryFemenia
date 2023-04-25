@@ -25,13 +25,49 @@ def dec_hex(decimal):
             hexadecimal = chr(ord('A') + remainder - 10) + hexadecimal
         decimal //= 16
     return hexadecimal
-
 #2 to 8/10/16
-#def all_dec(num,base):
+'''def bin_oct(bin):
+    binary_number = bin
+    decimal_number = int(binary_number, 2)
+    octal_number = oct(decimal_number)
+    return octal_number'''
 
-
+def bin_dec(binary):
+    bin = binary
+    dec = int(bin, 2)
+    return dec
+'''
+def bin_hex(binary):
+    bin = binary
+    dec = int(bin, 2)
+    hex = hex(dec)
+    return dec'''
 #8 to 2/10/16
+def oct_bin(octal):
+    decimal_num = int(str(octal), 8)
+    binary_num = bin(decimal_num)[2:]
+    return binary_num
 
+def oct_dec(octal_num):
+    decimal_num = int(str(octal_num), 8)
+    return decimal_num
 
-
+def oct_hex(octal_num):
+    decimal_num = int(str(octal_num), 8)
+    hexadecimal_num = hex(decimal_num)[2:]
+    return hexadecimal_num
 #16 to 2/8/10
+def hex_bin(hex_num):
+    hex_num = hex_num
+    binary_num = bin(int(hex_num, 16))[2:]
+    return binary_num
+
+def hex_oct(hex_num):
+    hex_num = hex_num
+    octal_num = oct(int(hex_num, 16))[2:]
+    return octal_num
+
+def hex_dec(hex_num):
+    hex_num = "2A"
+    decimal_num = int(hex_num, 16)
+    return decimal_num
